@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Products | Sekar Admin</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="admin-shell-page">
+    <aside class="admin-sidebar">
+      <a class="admin-logo" href="admin.html"><span>S</span><strong>Sekar Admin</strong></a>
+      <nav class="admin-nav">
+        <a href="admin.html"><span class="nav-home"></span>Ecommerce</a>
+        <a class="active" href="admin-products.html"><span class="nav-product"></span>Product</a>
+        <div class="admin-subnav"><a href="#products">All Products</a><a href="#add-product">Add Product</a><a href="#products">Edit Product</a><a href="#products">Product Details</a></div>
+        <a href="admin-categories.html"><span class="nav-category"></span>Category</a>
+        <a href="admin-orders.html"><span class="nav-order"></span>Order</a>
+        <a href="admin-users.html"><span class="nav-users"></span>Users</a>
+        <a href="admin-settings.html"><span class="nav-store"></span>Store Setting</a>
+        <a href="admin-reports.html"><span class="nav-report"></span>Report</a>
+        <a href="admin-settings.html"><span class="nav-setting"></span>Setting</a>
+      </nav>
+      <button id="adminLogoutButton" type="button">Log Out</button>
+    </aside>
+    <main class="admin-main">
+      <header class="admin-topbar">
+        <label class="admin-search"><span>Search</span><input id="adminSearch" type="search" placeholder="Search products..." /></label>
+        <div class="admin-top-actions"><button class="admin-icon-btn" type="button"><span class="flag-india"><i></i><i></i><i></i></span></button><button class="admin-icon-btn">◐</button><button class="admin-icon-btn has-dot">⌁</button><button class="admin-icon-btn">□</button><div class="admin-user"><span>SA</span><div><strong>Sekar Admin</strong><small>Sale Administrator</small></div></div><a class="admin-gear" href="admin-settings.html"></a></div>
+      </header>
+      <section class="admin-page-title"><div><h1>All Products</h1><p>Add, edit, and manage Sekar and Co product catalogue.</p></div><a class="admin-add-btn" href="#add-product">+ Add new</a></section>
+      <section class="admin-section" id="products">
+        <div class="admin-toolbar"><select><option>Showing 10 entries</option></select><input id="adminProductSearch" type="search" placeholder="Search here..." /><select><option>All Categories</option><option>Mobiles</option><option>ACs</option><option>Washing Machine</option></select><select><option>All Status</option><option>In Stock</option><option>Out of stock</option></select><select><option>Sort by (Default)</option></select></div>
+        <div class="admin-table-wrap"><table class="admin-table"><thead><tr><th>Product</th><th>Product ID</th><th>Price</th><th>Brand</th><th>Stock</th><th>Action</th></tr></thead><tbody id="adminProductRows"></tbody></table></div>
+      </section>
+      <section class="admin-section admin-form-section" id="add-product">
+        <h2>Add Product</h2>
+        <form id="adminProductForm" class="admin-form"><label>Product name<input id="adminProductName" required /></label><label>Category<input id="adminProductCategory" placeholder="Mobiles" required /></label><label>Price<input id="adminProductPrice" placeholder="Rs. 24,999" required /></label><label>MRP<input id="adminProductMrp" placeholder="Rs. 29,999" required /></label><label>Brand<input id="adminProductBrand" required /></label><label>Stock<input id="adminProductStock" value="In Stock" required /></label><label class="wide">Image URL<input id="adminProductImage" placeholder="assets/tv.webp" required /></label><button class="primary-btn" type="submit">Save Product</button></form>
+      </section>
+    </main>
+    <script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-app-compat.js"></script><script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore-compat.js"></script><script src="firebase-config.js"></script><script src="firebase-store.js"></script><script src="script.js"></script>
+  </body>
+</html>

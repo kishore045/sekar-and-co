@@ -1,0 +1,50 @@
+﻿<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Login | Sekar and Co</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="main-header">
+        <a class="brand" href="index.html"><span class="brand-mark">S</span><span><strong>Sekar and Co</strong><small>Appliances | Electronics | Service</small></span></a>
+        <form class="search" id="searchForm"><select><option>All</option></select><input id="searchInput" type="search" placeholder="Search your favorite product..." /><button type="submit">Search</button></form>
+        <div class="quick-actions"><a class="action-link account-link" href="login.html"><span class="action-icon account-icon"></span><span><small>Sign In</small><b class="account-name">Account</b></span></a><a class="action-link wish-link" href="wishlist.html"><span class="action-icon wish-icon"></span><strong class="action-badge" id="wishCount">0</strong></a><a class="action-link cart-btn" href="cart.html"><span class="action-icon cart-icon"></span><strong id="cartCount">0</strong></a></div>
+      </div>
+      <nav class="category-nav"></nav>
+    </header>
+
+    <main>
+      <section class="auth-layout">
+        <form class="auth-card" id="customerLoginForm">
+          <h1>Login</h1>
+          <label>Username or email address *<input id="loginEmail" type="text" required></label>
+          <label>Password *<input id="loginPassword" type="password" required></label>
+          <label class="check-row"><input type="checkbox"> Remember me</label>
+          <button class="primary-btn" type="submit">Log in</button>
+          <a class="text-link" href="#">Lost your password?</a>
+        </form>
+
+        <form class="auth-card" id="registerForm">
+          <h1>Register</h1>
+          <label>Email address *<input id="registerEmail" type="email" required></label>
+          <label>Password *<input id="registerPassword" type="password" required></label>
+          <p class="password-hint">Hint: Use at least 8 characters with letters and numbers.</p>
+          <p>Your personal data will be used to support your experience throughout this website and to manage access to your account.</p>
+          <button class="primary-btn" type="submit">Register</button>
+        </form>
+
+        <form class="auth-card admin-login-card" id="adminLoginForm">
+          <h1>Admin Login</h1>
+          <label>Admin ID *<input id="adminId" type="text" required></label>
+          <label>Password *<input id="adminPassword" type="password" required></label>
+          <p class="password-hint">Admin can update product list and offer details.</p>
+          <button class="primary-btn" type="submit">Open Admin Dashboard</button>
+        </form>
+      </section>
+    </main>
+    <script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-app-compat.js"></script><script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore-compat.js"></script><script src="firebase-config.js"></script><script src="firebase-store.js"></script><script src="script.js"></script>
+  </body>
+</html>

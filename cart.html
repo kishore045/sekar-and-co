@@ -1,0 +1,56 @@
+﻿<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Shopping Cart | Sekar and Co</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="service-bar">
+        <span>Welcome to Sekar and Co</span>
+        <div class="service-links"><a href="tel:9344493444">93444 93444</a><a href="#support">Live Chat</a><a href="login.html">Sign In</a></div>
+      </div>
+      <div class="main-header">
+        <a class="brand" href="index.html"><span class="brand-mark">S</span><span><strong>Sekar and Co</strong><small>Appliances | Electronics | Service</small></span></a>
+        <form class="search" id="searchForm"><select><option>All</option></select><input id="searchInput" type="search" placeholder="Search your favorite product..." /><button type="submit">Search</button></form>
+        <div class="quick-actions"><a class="action-link account-link" href="login.html"><span class="action-icon account-icon"></span><span><small>Sign In</small><b class="account-name">Account</b></span></a><a class="action-link wish-link" href="wishlist.html"><span class="action-icon wish-icon"></span><strong class="action-badge" id="wishCount">0</strong></a><a class="action-link cart-btn" href="cart.html"><span class="action-icon cart-icon"></span><strong id="cartCount">0</strong></a></div>
+      </div>
+      <nav class="category-nav"><button class="menu-btn" id="menuToggle">Menu</button><a href="special-offer.html">Mobiles</a><a href="shop-by-brands.html">Laptop &amp; Gadgets</a><a href="televisions.html">Television</a><a href="special-offer.html">Refrigerator</a><a href="air-conditioner.html">ACs</a><a href="washing-machine.html">Washing Machine</a><a href="water-heaters.html">Small Appliances</a><a href="kitchen-appliances.html">Kitchen Appliances</a><a href="shop-by-brands.html">Furnitures</a><a href="special-offer.html">Solar</a></nav>
+    </header>
+
+    <aside class="mobile-menu" id="mobileMenu"><a href="special-offer.html">Mobiles</a><a href="shop-by-brands.html">Laptop &amp; Gadgets</a><a href="televisions.html">Television</a><a href="special-offer.html">Refrigerator</a><a href="air-conditioner.html">ACs</a><a href="washing-machine.html">Washing Machine</a><a href="water-heaters.html">Small Appliances</a><a href="kitchen-appliances.html">Kitchen Appliances</a><a href="shop-by-brands.html">Furnitures</a><a href="special-offer.html">Solar</a></aside>
+
+    <main>
+      <div class="breadcrumb dark">Home &gt; Shopping Cart</div>
+      <section class="cart-page">
+        <div>
+          <p class="delivery-note">We deliver only to Tamil Nadu and Pondicherry</p>
+          <div class="cart-table">
+            <div class="cart-head"><span>Product</span><span>Product Name</span><span>Product Price</span><span>GST</span><span>Quantity</span><span>Subtotal</span><span></span></div>
+            <div id="cartItems"></div>
+          </div>
+          <a class="primary-btn continue-btn" href="index.html">&lt;- Continue Shopping</a>
+        </div>
+
+        <aside class="price-card">
+          <h2>PRICE DETAILS</h2>
+          <div class="summary-line"><span>Price <small>(tax included)</small></span><strong id="summaryPrice">Rs. 0.00</strong></div>
+          <div class="summary-line"><span>Delivery Charges</span><span></span></div>
+          <div class="summary-line warning"><span>(paid at delivery time)</span><strong>Extra</strong></div>
+          <div class="summary-total"><span>Total Amount</span><strong id="summaryTotal">Rs. 0.00</strong></div>
+          <a class="primary-btn checkout-btn" href="checkout.html">Proceed To Checkout -&gt;</a>
+        </aside>
+      </section>
+    </main>
+
+    <footer class="site-footer" id="support">
+      <div><h2>Sekar and Co</h2><p>Home appliances, electronics, installation, and support.</p></div>
+      <div><h3>Contact</h3><a href="tel:9344493444">93444 93444</a></div>
+      <div><h3>Store Services</h3><a href="special-offer.html">Exchange offers</a><a href="#">EMI options</a></div>
+      <form class="newsletter"><h3>Get Offers</h3><input type="email" placeholder="Enter email" /><button>Submit</button></form>
+    </footer>
+    <script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-app-compat.js"></script><script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore-compat.js"></script><script src="firebase-config.js"></script><script src="firebase-store.js"></script><script src="script.js"></script>
+  </body>
+</html>

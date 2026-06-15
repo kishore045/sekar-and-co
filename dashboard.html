@@ -1,0 +1,38 @@
+﻿<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>My Account | Sekar and Co</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="main-header">
+        <a class="brand" href="index.html"><span class="brand-mark">S</span><span><strong>Sekar and Co</strong><small>Appliances | Electronics | Service</small></span></a>
+        <form class="search" id="searchForm"><select><option>All</option></select><input id="searchInput" type="search" placeholder="Search your favorite product..." /><button type="submit">Search</button></form>
+        <div class="quick-actions"><a class="action-link account-link" href="dashboard.html"><span class="action-icon account-icon"></span><span><small>Welcome</small><b class="account-name">Account</b></span></a><a class="action-link wish-link" href="wishlist.html"><span class="action-icon wish-icon"></span><strong class="action-badge" id="wishCount">0</strong></a><a class="action-link cart-btn" href="cart.html"><span class="action-icon cart-icon"></span><strong id="cartCount">0</strong></a></div>
+      </div>
+      <nav class="category-nav"></nav>
+    </header>
+    <main>
+      <section class="account-layout">
+        <aside class="account-menu">
+          <a class="active" href="dashboard.html">Dashboard</a>
+          <a href="cart.html">Orders</a>
+          <a href="#">Downloads</a>
+          <a href="checkout.html">Addresses</a>
+          <a href="#">Account details</a>
+          <a href="wishlist.html">Wishlist</a>
+          <a href="#">Compare</a>
+          <button id="logoutButton" type="button">Log out</button>
+        </aside>
+        <div class="account-content">
+          <p>Hello <strong id="dashboardName">customer</strong> <span>(not <strong id="dashboardNameSmall">customer</strong>? <button id="logoutTextButton" type="button">Log out</button>)</span></p>
+          <p>From your account dashboard you can view your <a href="cart.html">recent orders</a>, manage your <a href="checkout.html">shipping and billing addresses</a>, and edit your password and account details.</p>
+        </div>
+      </section>
+    </main>
+    <script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-app-compat.js"></script><script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore-compat.js"></script><script src="firebase-config.js"></script><script src="firebase-store.js"></script><script src="script.js"></script>
+  </body>
+</html>
